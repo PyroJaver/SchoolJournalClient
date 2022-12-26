@@ -13,6 +13,9 @@ public class StudentDTO {
     @Size(min = 2, max = 100)
     private String surname;
 
+    @NotEmpty
+    private String diaryNumber;
+
     public String getName() {
         return name;
     }
@@ -29,11 +32,20 @@ public class StudentDTO {
         this.surname = surname;
     }
 
-    public StudentDTO(String name, String surname) {
+
+    public StudentDTO(String name, String surname, String diaryNumber) {
         this.name = name;
         this.surname = surname;
+        this.diaryNumber = diaryNumber;
     }
 
     public StudentDTO() {
+    }
+    public String getDiaryNumber() {
+        return diaryNumber;
+    }
+
+    public void setDiaryNumber(String diaryNumber) {
+        this.diaryNumber = diaryNumber;
     }
 }
